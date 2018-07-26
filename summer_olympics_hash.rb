@@ -27,9 +27,12 @@ end
 end
 
 def iterate_through_keys
-upcased_cities={}
-  upcased_cities[olympics_hash.each_key]
+  olympics_hash=add_a_key_value_pair
+  upcased_cities=[]
+  olympics_hash.each_key do |key|
+    upcased_cities << key.upcase 
+  end
   puts upcased_cities
   return upcased_cities
 end
-puts olympics_hash
+iterate_through_keys
